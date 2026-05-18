@@ -8,7 +8,10 @@ const userModel = require('./models/user.model');
 const app = express();
 
 app.use(cors({
-    origin: ['http://127.0.0.1:5500', 'http://localhost:5500'],  // Allowed origins
+    origin: function (origin, callback) {
+        // Allow any origin for testing
+        callback(null, true);
+    },
     credentials: true
 }));
 app.use(express.json());
