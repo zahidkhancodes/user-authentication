@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f0f0f;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.card h1 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    color: #ccc;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #6366f1;
+}
+
+.btn {
+    width: 100%;
+    padding: 13px;
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #4f52d6;
+}
+
+.logout-btn {
+    background: #dc2626;
+    margin-top: 20px;
+}
+
+.logout-btn:hover {
+    background: #b91c1c;
+}
+
+.status {
+    margin-top: 14px;
+    font-size: 13px;
+    min-height: 18px;
+    text-align: center;
+}
+
+.status.success {
+    color: #4ade80;
+}
+
+.status.error {
+    color: #f87171;
+}
+
+.switch {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+}
+
+.switch a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.switch a:hover {
+    text-decoration: underline;
+}
+
+.email-badge {
+    display: inline-block;
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px 18px;
+    color: #a5b4fc;
+    font-size: 15px;
+    margin: 10px 0 4px;
+    word-break: break-all;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth — Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- LOGIN PAGE -->
+    <div class="card" id="loginPage">
+      <h1>Welcome Back</h1>
+      <p class="subtitle">Sign in to your account</p>
+
+      <div class="form-group">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="you@example.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" placeholder="••••••••" />
+      </div>
+
+      <button class="btn" onclick="login()">Login</button>
+      <div class="status" id="loginStatus"></div>
+
+      <p class="switch">Don't have an account? <a href="#" onclick="showPage('registerPage')">Register</a></p>
+    </div>
+
+
+    <!-- REGISTER PAGE -->
+    <div class="card hidden" id="registerPage">
+      <h1>Create Account</h1>
+      <p class="subtitle">Register with your email</p>
+
+      <div class="form-group">
+        <label for="regEmail">Email</label>
+        <input type="email" id="regEmail" placeholder="you@example.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="regPassword">Password</label>
+        <input type="password" id="regPassword" placeholder="Min. 6 characters" />
+      </div>
+
+      <button class="btn" onclick="register()">Register</button>
+      <div class="status" id="registerStatus"></div>
+
+      <p class="switch">Already have an account? <a href="#" onclick="showPage('loginPage')">Login</a></p>
+    </div>
+
+
+    <!-- DASHBOARD (shown after login) -->
+    <div class="card hidden" id="dashboardPage">
+      <h1>Dashboard</h1>
+      <p class="subtitle">You are logged in as</p>
+      <p class="email-badge" id="userEmail">—</p>
+      <button class="btn logout-btn" onclick="logout()">Logout</button>
+      <div class="status" id="logoutStatus"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
