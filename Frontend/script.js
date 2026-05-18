@@ -1,4 +1,4 @@
-const API = 'http://localhost:4000';
+const API = 'https://user-authentication-afpx.onrender.com';
 
 function showPage(pageId) {
     document.querySelectorAll('.card').forEach(c => c.classList.add('hidden'));

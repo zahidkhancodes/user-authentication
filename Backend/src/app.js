@@ -88,8 +88,8 @@ app.post('/login', async (req, res) => {
 
     res.cookie('token', token, {
         httpOnly: true,
-        secure: false,       // set to true in production with HTTPS
-        sameSite: 'Lax',
+        secure: true,        // must be true for cross-domain sameSite: 'none'
+        sameSite: 'none',    // supports cross-origin requests (e.g. frontend on localhost/github pages, backend on Render)
         maxAge: 7 * 24 * 60 * 60 * 1000  // 7 days in ms
     });
 
@@ -100,7 +100,8 @@ app.post('/login', async (req, res) => {
 app.post('/logout', (req, res) => {
     res.clearCookie('token', {
         httpOnly: true,
-        sameSite: 'Lax'
+        secure: true,
+        sameSite: 'none'
     });
     res.status(200).json({ message: "Logged out successfully" });
 });
